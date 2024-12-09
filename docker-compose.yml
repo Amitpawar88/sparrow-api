@@ -1,4 +1,4 @@
-version: "3.8"
+version: '3'
 
 services:
   # MongoDB
@@ -7,10 +7,13 @@ services:
     environment:
       MONGO_INITDB_ROOT_USERNAME: sparowapp
       MONGO_INITDB_ROOT_PASSWORD: sparrow123
+#      network_mode: host
     ports:
       - "27017:27017"
-    networks:
-      - localnet
+        #   networks:
+        # - localnet
+
+
 
   # Kafka
   kafka:
@@ -20,6 +23,7 @@ services:
       - "9092:9092"
     volumes:
       - "kafka_data:/bitnami"
+    network_mode: host
     environment:
       - KAFKA_ENABLE_KRAFT=yes
       - KAFKA_CFG_PROCESS_ROLES=broker,controller
@@ -47,6 +51,6 @@ volumes:
   kafka_data:
     driver: local
 
-networks:
-  localnet:
-    attachable: true
+      # networks:
+      # localnet:
+      #  attachable: true
