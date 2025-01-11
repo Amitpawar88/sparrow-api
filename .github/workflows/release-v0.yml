@@ -2,7 +2,7 @@ name: Release-V0
 on:
   push:
     branches:
-      - release-v0
+      - pratik/release-v0
 
 jobs:
    build:
