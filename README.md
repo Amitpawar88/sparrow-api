@@ -5,7 +5,7 @@
 </p>
  
 <h1 align="center">
-One-stop API management tool
+The API Sidekick You Need
 </h1>
  
 ![TypeScript](https://img.shields.io/badge/-TypeScript-black?style=for-the-badge&logoColor=white&logo=typescript&color=2F73BF)
